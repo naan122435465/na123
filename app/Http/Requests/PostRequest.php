@@ -24,8 +24,9 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'type'=>'string',
-            'name'=>'string|max:255',
+            'hotel_id'=>'required',
+            'type'=>'required,string',
+            'name'=>'required,string|max:255',
             'content'=>'text',
         ];
     }
